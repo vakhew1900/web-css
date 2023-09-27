@@ -1,0 +1,139 @@
+:root {
+  --font: 'Poppins', sans-serif;
+  --shadow-md: 0 2px 4px 0 rgb(12 0 46 / 4%);
+  --shadow-lg: 0 10px 14px 0 rgb(12 0 46 / 6%);
+  --z-sticky: 7777;
+  --z-navbar: 8888;
+  --z-drawer: 9999;
+  --z-modal: 9999;
+  --swiper-navigation-size: 44px;
+  --swiper-theme-color: #007aff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.light-theme {
+  --background: rgb(251, 251, 253);
+  --secondBackground: rgb(255, 255, 255);
+  --text: rgb(10, 18, 30);
+  --textSecondary: rgb(255, 255, 255);
+  --primary: rgb(22, 115, 255);
+  --secondary: rgb(10, 18, 30);
+  --tertiary: rgb(231, 241, 251);
+  --cardBackground: rgb(255, 255, 255);
+  --inputBackground: rgb(255, 255, 255);
+  --navbarBackground: rgb(255, 255, 255);
+  --modalBackground: rgb(251, 251, 253);
+  --errorColor: rgb(207, 34, 46);
+  --logoColor: #243A5A;
+}
+
+.dark-theme {
+  --background: rgb(26, 32, 44);
+  --secondBackground: rgb(45, 55, 72);
+  --text: rgb(237, 237, 238);
+  --textSecondary: rgb(255, 255, 255);
+  --primary: rgb(22, 115, 255);
+  --secondary: rgb(10, 18, 30);
+  --tertiary: rgb(231, 241, 251);
+  --cardBackground: rgb(45, 55, 72);
+  --inputBackground: rgb(45, 55, 72);
+  --navbarBackground: rgb(45, 55, 72);
+  --modalBackground: rgb(26, 32, 44);
+  --errorColor: rgb(207, 34, 46);
+  --logoColor: #fff;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--background);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.logo a {
+  color: var(--logoColor);
+}
+
+ul.main-menu a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+}
+
+.btn-signup {
+    background: var(--primary);
+    padding: 1.75rem 2.25rem;
+    font-size: 1.2rem;
+    color: var(--textSecondary);
+    text-transform: uppercase;
+    font-family: var(--font);
+    font-weight: bold;
+    border-radius: 0.4rem;
+    border: 2px solid var(--primary);
+    transition: transform 0.3s ease 0s;
+    cursor: pointer;
+  }
+  
+.btn-toggle-theme {
+  margin-left: 1rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  border: 0px;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  color: var(--text);
+  position: relative;
+}
+
+.btn-signup:hover {
+    transform: scale(1.1);
+}
+
+.btn-toggle-theme svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease 0s;
+}
+
+.light-theme .sun {
+  /* visibility: hidden; */
+  opacity: 0;
+}
+
+.dark-theme .moon {
+  opacity: 0;
+}
