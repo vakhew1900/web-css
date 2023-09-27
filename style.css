@@ -1,5 +1,4 @@
 .light-theme {
-  /* css-переменная инициализация через --, потом обращение через var */
   --background: rgb(251,251,253);
   --secondBackground: rgb(255,255,255);
   --text: rgb(10,18,30);
@@ -70,7 +69,7 @@ html {
   flex-grow: 1;
 }
 
-.logo a { /* поиск всех a вложенных в класс logo */
+.logo a { 
   color: var(--logoColor);
 }
 body {
@@ -157,12 +156,10 @@ ul.main-menu a {
 }
 
 .light-theme .sun {
-  /* visibility: hidden; */
   opacity: 0;
 }
 
 .dark-theme .moon {
-  /* visibility: hidden; */
   opacity: 0;
 }
 
@@ -297,4 +294,14 @@ ul.main-menu a {
   margin: 0px auto;
   padding: 0px 2rem;
   margin-top: 15rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.partners-logo-container{
+  width: 100%;
+  padding-top: 5rem;
+  justify-content: space-between;
 }
