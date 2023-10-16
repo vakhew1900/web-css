@@ -712,6 +712,15 @@ a {
   column-gap: 10px;
 }
 
+.slider{
+  display: flex;
+  width: calc(100% * 3);
+}
+
+.slider-wrapper{
+  overflow: hidden;
+}
+
 /* WRAP-CARD */
 
 .wrap-card-wrapper {
