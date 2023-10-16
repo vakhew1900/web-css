@@ -666,3 +666,112 @@ a {
   font-size: 1.5rem;
   margin-top: 0.5rem;
 }
+
+
+.gp-type {
+  column-gap: 100px;
+}
+
+/* -----------------------SLIDER------------------ */
+
+.slide {
+  height: 250px;
+  font-size: 1.4rem;
+}
+
+.slide-quote {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-style: italic;
+  max-width: 60%;
+}
+
+.person-name {
+  font-weight: normal;
+  margin: 0px;
+}
+
+.person-position {
+  font-weight: bold;
+  margin: 0px;
+}
+
+
+
+.person-photo>img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.slide-person-wrapper {
+  display: flex;
+  column-gap: 10px;
+}
+
+/* WRAP-CARD */
+
+.wrap-card-wrapper {
+  background-color: var(--cardBackground);
+  min-width: 320px;
+  max-height: 360px;
+  border-radius: 3%;
+  padding-bottom: 40px;
+}
+
+.wrap-card-img-container {
+  height: 192px;
+  width: 100%;
+  background-image: url(https://next-saas-starter-ashy.vercel.app/_next/image?url=%2Fposts%2Ftest-article%2Fexample-image-1.jpeg&w=1200&q=75);
+  background-size: cover;
+  border-radius: 5% 5% 0 0;
+}
+
+.wrap-card-title {
+  font-size: 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.wrap-card-text {
+  font-size: 1.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  opacity: 0.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.wrap-card-info{
+  max-width: 80%;
+}
+
+.wrap-card:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease 0s;
+}
+
+h4{
+  margin: 1rem, 0px;
+}
+
+.wrap-card-container{
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.wrap-card-visible
+{
+  display: flex;
+  column-gap: 15px;
+  overflow: auto;
+  width: 200%;
+}
