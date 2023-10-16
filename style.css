@@ -41,6 +41,7 @@
   --swiper-navigation-size: 44px;
   --swiper-theme-color: #007aff;
   --card-circle-size: 50px;
+  --card-gap-three: 20px
 }
 
 
@@ -529,4 +530,59 @@ h2{
   display: flex;
   gap: 30px;
   align-items: center;
+}
+
+.mt-150
+{
+  margin-top: 150px;
+}
+
+.feature-card{
+  display: flex;
+  padding: 2.5rem;
+  background: var(--cardBackground);
+  box-shadow: var(--shadow-md);
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3 - 4 * var(--card-gap-three));
+  border-radius: 0.6rem;
+  color: var(--text);
+  font-size: 1.6rem;
+}
+
+.feature-card-title
+{
+  margin-top: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.сontain-img
+{
+  object-fit: contain; 
+  object-position: bottom; 
+}
+
+.feature-card-img
+{
+  max-height: 72px; 
+  width: 100%;
+}
+
+.img-feature-card-container
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.feature-card-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--card-gap-three);
 }
