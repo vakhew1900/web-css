@@ -47,6 +47,12 @@ html {
   font-size: 62.5%;
 }
 
+body
+{
+  margin: 0px;
+  padding: 0px;
+}
+
 @media (max-width: 56.25em) {
 html {
   font-size: 60%;
@@ -348,4 +354,127 @@ ul.list {
 ul.list li{
   padding-left: 2rem;
   position: relative;
+}
+
+h3{
+  font-size: 4.2rem;
+}
+
+.pt-5
+{
+  padding-top: 60px;
+}
+
+.pb-5
+{
+  padding-bottom: 60px;
+}
+
+.bg-secondary
+{
+  background-color: var(--secondary);
+  color: var(--textSecondary);
+}
+
+.w-100
+{
+  width: 100%
+}
+
+.button-section
+{
+  max-width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.btn-container
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-feature-secondary
+{
+    border: 1px solid var(--textSecondary);
+    color: rgb(var(--textSecondary));
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+    padding: 1.75rem 2.25rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: var(--font);
+    font-weight: bold;
+    transition: transform 0.3s ease 0s;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.text-center
+{
+  text-align: center;
+}
+
+h2{
+
+  font-size: 5.2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 4rem;
+  letter-spacing: -0.03em;
+  margin-top: 0px;
+}
+
+.pt-150
+{
+  margin-top: 150px;
+}
+
+.pb-150
+{
+  margin-bottom: 150px;
+}
+
+.accordion-card{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  background: var(--cardBackground);
+  box-shadow: var(--shadow-md);
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  transition: opacity 0.2s ease 0s;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.card-circle 
+{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: brown;
+}
+
+.card-top
+{
+  display: flex;
+  align-items: center;
+}
+
+.card-title
+{
+  padding-left: 1rem;
+}
+.card-text
+{
+  padding-left: calc(5rem + 1rem);
+  padding-top: 0.5rem;
+  font-weight: normal
 }
