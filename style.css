@@ -40,6 +40,7 @@
   --z-modal: 9999;
   --swiper-navigation-size: 44px;
   --swiper-theme-color: #007aff;
+  --card-circle-size: 50px;
 }
 
 
@@ -440,7 +441,7 @@ h2{
 }
 
 .accordion-card{
-  width: 30%;
+  width: 25vw;
   display: flex;
   flex-direction: column;
   padding: 2rem 1.5rem;
@@ -452,12 +453,13 @@ h2{
   transition: opacity 0.2s ease 0s;
   font-size: 1.7rem;
   font-weight: bold;
+  opacity: 0.8;
 }
 
 .card-circle 
 {
-  width: 5rem;
-  height: 5rem;
+  width: var(--card-circle-size);
+  height: var(--card-circle-size);
   border-radius: 100%;
   background-color: brown;
 }
@@ -466,15 +468,65 @@ h2{
 {
   display: flex;
   align-items: center;
+  column-gap: calc(1rem);
 }
 
 .card-title
 {
   padding-left: 1rem;
+  text-wrap: wrap;
+  width: calc(100% - var(--card-circle-size) - 1rem - 1rem);
 }
+
 .card-text
 {
-  padding-left: calc(5rem + 1rem);
   padding-top: 0.5rem;
-  font-weight: normal
+  font-weight: normal;
+  display: none;
+  text-wrap: wrap;
+}
+
+.accordion-card-container
+{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.display-none
+{
+  display: none;
+}
+
+.selected-card
+{
+  opacity: 1;
+}
+
+.selected-card .card-text
+{
+  display: block; 
+}
+
+.accordion-img-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.flexible-img-bg
+{
+  height: 450px;
+  width: 800px;
+  background-image: url(https://next-saas-starter-ashy.vercel.app/_next/image?url=%2Fdemo-illustration-5.png&w=1200&q=80);
+  background-size: cover;
+}
+
+.accordion-container
+{
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
