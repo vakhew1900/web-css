@@ -623,7 +623,8 @@ h2 {
   height: 450px;
   width: 800px;
   background-image: url(https://next-saas-starter-ashy.vercel.app/_next/image?url=%2Fdemo-illustration-5.png&w=1200&q=80);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .accordion-container {
@@ -635,9 +636,10 @@ h2 {
 @media(max-width: 1025px) {
   .accordion-container{
     flex-direction: column;
+    width: 100%;
   }
   .flexible-img-bg{
-    width: 0;
+    width: 90vw;
   }
 
   .accordion-card{
@@ -667,6 +669,34 @@ h2 {
   font-size: 1.6rem;
 }
 
+@media (max-width: 1000px) {
+  .feature-card
+  {
+    width: calc(100% / 2 - 4 * var(--card-gap-three));
+  }
+}
+
+@media (max-width: 800px) {
+  .feature-card
+  {
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  .feature-card
+  {
+    width: calc(100% / 2 - 4 * var(--card-gap-three));
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-card
+  {
+    width: 90%;
+  }
+}
+
 .feature-card-title {
   margin-top: 1rem;
   font-weight: bold;
@@ -693,6 +723,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--card-gap-three);
+  justify-content: center;
 }
 
 .mb-150 {
@@ -747,7 +778,7 @@ h2 {
 
 .second-btn-section {
   padding-top: 50px;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
 }
 
 .footer-nav {
@@ -756,14 +787,39 @@ h2 {
   padding-bottom: 60px;
 }
 
+@media (max-width: 1000px){
+  .footer-nav{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .footer-nav-col{
+    min-width: 35%;
+    padding-bottom: 30px;
+  }
+
+  .second-btn-section {
+    padding-top: 30px;
+    padding-bottom: 100px;
+  }
+}
+
 .footer-nav-header {
   font-weight: bold;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
+
+@media (max-width: 300px){
+  .footer-nav{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .footer-nav-list {
-  font-size: 1.7rem;
+  font-size: 2rem;
   list-style-type: none;
   margin: 0px;
   padding: 0px;
@@ -787,12 +843,22 @@ a {
   gap: 1.1rem;
 }
 
+
+
+
 .footer-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 60px;
   padding-bottom: 40px;
+}
+
+@media (max-width: 1000px) {
+  .footer-info{
+      flex-direction: column;
+      justify-content: center;
+  }
 }
 
 .copyright {
