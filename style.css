@@ -13,6 +13,7 @@
   --errorColor: rgb(207, 34, 46);
   --logoColor: #243A5A;
   --lineColor: rgba(10, 18, 30, 0.025);
+
 }
 
 .dark-theme {
@@ -43,7 +44,10 @@
   --swiper-navigation-size: 44px;
   --swiper-theme-color: #007aff;
   --card-circle-size: 50px;
-  --card-gap-three: 20px
+  --card-gap-three: 20px;
+  --mediumSize: 1025px;
+  --smallSize: 1000px;
+  --minSize: 768px;
 }
 
 
@@ -283,7 +287,7 @@ ul.main-menu a {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .text-links{
     flex-direction: column;
   }
@@ -398,6 +402,8 @@ ul.main-menu a {
   width: 100%;
   padding-top: 5rem;
   justify-content: space-between;
+  overflow: hidden;
+  column-gap: 20px;
 }
 
 .main-content-section {
@@ -409,11 +415,31 @@ ul.main-menu a {
   justify-content: space-between;
 }
 
+@media (max-width: 1025px)
+{
+  .main-content-section{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 .side-img {
   /* width: 100%;  */
   max-height: 400px;
   object-fit: contain;
   object-position: bottom;
+}
+
+@media (max-width: 1025px)
+{
+  .side-img{
+    max-height: 1000px;
+  }
+
+  .second-main-section{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 
