@@ -984,7 +984,7 @@ h4 {
   width: 5000px;
 }
 
-
+/*------------------------ ASIDE MENU --------------------------------------------*/
 
 .aside-menu {
   position: fixed;
@@ -994,11 +994,17 @@ h4 {
   z-index: var(--z-drawer);
   transform: translateX(-100%);
   transition: transform 0.3s ease 0s;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
 
+
+@media (max-width: 1000px) {
+  .aside-menu{
+    display: flex;
+  }
+}
 
 .aside-menu.show {
   transform: translateX(0%);
