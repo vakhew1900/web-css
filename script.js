@@ -48,7 +48,6 @@ document.querySelector('.btn-next').addEventListener('click', function () {
     count++;
     if (count >= images.length) {
         count = 1;
-
         sliderLine.classList.add('slider-transition-off')
         setTimeout(() => {
             console.log(sliderLine.classList)
@@ -58,8 +57,10 @@ document.querySelector('.btn-next').addEventListener('click', function () {
             rollSlider();
         }, 20)
     }
-    console.log(count)
+
     rollSlider();
+    
+    console.log(count)
     
 });
 
@@ -78,8 +79,7 @@ document.querySelector('.btn-prev').addEventListener('click', function () {
         }, 20)
     }
 
-    console.log(count)
-    rollSlider();
+    rollSlider()
 });
 
 function rollSlider() {
