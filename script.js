@@ -1,20 +1,20 @@
 const btnToggleTheme = document.querySelector('.btn-toggle-theme');
 const body = document.querySelector('body');
 btnToggleTheme.addEventListener('click', () => {
-  body.classList.toggle('dark-theme');
-  body.classList.toggle('light-theme');
+    body.classList.toggle('dark-theme');
+    body.classList.toggle('light-theme');
 });
 
 
 const btnAsideMenu = document.querySelector('.menu-list-btn');
 const asideMenu = document.querySelector('.aside-menu');
 btnAsideMenu.addEventListener('click', () => {
-  asideMenu.classList.add('show');
+    asideMenu.classList.add('show');
 });
 
 const btnCloseAsideMenu = document.querySelector('.aside-menu .close');
 btnCloseAsideMenu.addEventListener('click', () => {
-  asideMenu.classList.remove('show');
+    asideMenu.classList.remove('show');
 });
 
 
@@ -25,8 +25,8 @@ const sliderLine = document.querySelector('.slider');
 firstSlide = sliderLine.firstElementChild.cloneNode(true);
 lastSlide = sliderLine.lastElementChild.cloneNode(true);
 
- sliderLine.insertBefore(lastSlide, sliderLine.firstElementChild);
- sliderLine.appendChild(firstSlide);
+sliderLine.insertBefore(lastSlide, sliderLine.firstElementChild);
+sliderLine.appendChild(firstSlide);
 
 const images = document.querySelectorAll('.slide');
 
@@ -57,14 +57,13 @@ document.querySelector('.btn-next').addEventListener('click', function () {
             rollSlider();
         }, 20)
     }
-    else 
-    {
+    else {
         rollSlider();
     }
 
-    
+
     console.log(count)
-    
+
 });
 
 document.querySelector('.btn-prev').addEventListener('click', function () {
@@ -90,3 +89,42 @@ function rollSlider() {
     sliderLine.style.transform = 'translate(-' + count * width + 'px)';
 
 }
+
+
+document.querySelector('.accordion-card-container').addEventListener('click', (event) => {
+
+    const curCard = event.target.closest('.accordion-card');
+    console.log(curCard);
+
+    const accordionCards = document.querySelectorAll('.accordion-card')
+    const accordionImg = document.querySelectorAll('.flexible-img-bg')
+
+    let selectedCard = undefined;
+    let selectedImg = undefined;
+
+    accordionCards.forEach((element) => {
+        if (element.classList.contains('selected-card')) {
+            selectedCard = element;
+        }
+    })
+
+    accordionImg.forEach((element) => {
+        if (element.classList.contains('show')) {
+            console.log('true')
+            selectedImg = element;
+        }
+    })
+
+    console.log(selectedImg)
+
+    for (let i = 0; i < accordionCards.length; i++) {
+        if (curCard == accordionCards[i] && curCard.classList.contains('selected-card') == false) {
+            selectedCard.classList.remove('selected-card');
+            curCard.classList.add('selected-card');
+
+            selectedImg.classList.remove('show');
+            accordionImg[i].classList.add('show');
+        }
+    }
+
+})

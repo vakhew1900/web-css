@@ -614,11 +614,26 @@ h2 {
 
 
 .flexible-img-bg {
+  display: none;
   height: 450px;
   width: 800px;
   background-image: url(https://next-saas-starter-ashy.vercel.app/_next/image?url=%2Fdemo-illustration-5.png&w=1200&q=80);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.show {
+  display: block;
+}
+
+.second-bg
+{
+  background-image: url(https://next-saas-starter-ashy.vercel.app/_next/image?url=%2Fdemo-illustration-4.png&w=1200&q=80);
+}
+
+.third-bg
+{
+  background-image: url(https://next-saas-starter-ashy.vercel.app/_next/image?url=%2Fdemo-illustration-3.png&w=1200&q=80);
 }
 
 .accordion-container {
