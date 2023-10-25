@@ -642,6 +642,30 @@ h2 {
   }
 }
 
+@media(max-width: 1025px) {
+  .flexible-img-bg{
+    height: 400px;
+  }
+}
+
+@media(max-width: 767px) {
+  .flexible-img-bg{
+    height: 300px;
+  }
+}
+
+@media(max-width: 450px) {
+  .flexible-img-bg{
+    height: 200px;
+  }
+}
+
+@media(max-width: 300px) {
+  .flexible-img-bg{
+    height: 150px;
+  }
+}
+
 .mt-150 {
   margin-top: 150px;
 }

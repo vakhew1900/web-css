@@ -57,8 +57,11 @@ document.querySelector('.btn-next').addEventListener('click', function () {
             rollSlider();
         }, 20)
     }
+    else 
+    {
+        rollSlider();
+    }
 
-    rollSlider();
     
     console.log(count)
     
@@ -78,8 +81,9 @@ document.querySelector('.btn-prev').addEventListener('click', function () {
             rollSlider();
         }, 20)
     }
-
-    rollSlider()
+    else {
+        rollSlider()
+    }
 });
 
 function rollSlider() {
