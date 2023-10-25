@@ -568,12 +568,6 @@ h2 {
   opacity: 0.8;
 }
 
-.card-circle {
-  width: var(--card-circle-size);
-  height: var(--card-circle-size);
-  border-radius: 100%;
-  background-color: brown;
-}
 
 .card-top {
   display: flex;
@@ -918,6 +912,11 @@ a {
   transition: transform 0.6s ease 0s;
 }
 
+.slider-transition-off
+{
+  transition: none;
+}
+
 .slider-wrapper {
   overflow: hidden;
   position: relative;
@@ -1080,3 +1079,54 @@ h4 {
   width: 4rem;
   height: 4rem;
 }
+
+
+
+  .card-circle {
+  position: relative;
+  display: inline-block;
+  opacity: 0.8;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100rem;
+  z-index: 0;
+  transition: background 0.2s ease 0s;
+  }
+  
+  .card-circle::before {
+  content: "";
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100rem;
+  z-index: -1;
+  width: 2rem;
+  height: 2rem;
+  }
+  
+  .card-circle::after {
+  content: "";
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100rem;
+  z-index: -1;
+  width: 4rem;
+  height: 4rem;
+  background: rgb(221, 9, 57);
+  z-index: -2;
+  }
+
+  .card-circle-secondary::after {
+    background: rgb(99, 172, 232);
+    }
+    
+  .card-circle-tertiary::after {
+  background: rgb(124, 207, 158);
+  }
